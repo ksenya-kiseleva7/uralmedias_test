@@ -1,0 +1,47 @@
+// Миксин для заголовков
+@mixin fluid-text($max, $min, $lineHeight, $uppercase: false) {
+  $maxViewportWidth: 1920;
+  $minViewportWidth: 320;
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  font-size: clamp(
+          #{$minSize} * 1rem,
+          #{$yAxisIntersection} * 1rem + #{$slope * 100vw},
+          #{$maxSize} * 1rem
+  );
+  line-height: $lineHeight;
+
+  @if $uppercase == true {
+    text-transform: uppercase;
+  }
+}
+
+//отступы
+@mixin fluid-space(
+  $property,
+  $max: 100,
+  $min: 10,
+
+) {
+  $maxVW: 1920;
+  $minVW: 320;
+  $maxValue: math.div($max, 16);
+  $minValue: math.div($min, 16);
+  $maxWidth: math.div($maxVW, 16);
+  $minWidth: math.div($minVW, 16);
+
+  $slope: math.div(($maxValue - $minValue), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minValue;
+
+  #{$property}: clamp(
+          #{$minValue*1rem},
+          #{$yAxisIntersection*1rem} + #{$slope*100vw},
+          #{$maxValue*1rem}
+  );
+}
