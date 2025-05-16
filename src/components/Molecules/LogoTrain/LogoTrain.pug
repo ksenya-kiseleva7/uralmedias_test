@@ -1,0 +1,6 @@
+mixin LogoTrain
+    .m-logoTrain.js-logoTrain(style="--rowWidth: 1000px")
+        .m-logoTrain__row.js-logoTrain__row
+            - for(var j = 1; j <= 6; ++j) {
+                img(src="/img/um-logo.svg", alt="Лого "+j loading="lazy").js-logoTrain__item
+            - }

@@ -1,0 +1,20 @@
+extends /common/layout
+
+block append head 
+	link(href="/styles/ui-kit.page.min.css" rel="stylesheet")
+
+block content
+	main.ui-kit
+		+UiNav
+		+UiSections
+			+UiContainer
+				+UiSections
+
+					+UiCell('<i><b>+FormPopup</b></i> - попап, открывается при нажатии на кнопку, при вызове метода `umGlobal.togglePopup`, параметром передается идентификатор попапа. Сам попап размещен в layout')
+						+Btn(onclick='umGlobal.togglePopup("callback")') Открыть попап
+
+					+UiCell('<i><b>+SuccessPopup</b></i> - попап, открывается при нажатии на кнопку, при вызове метода `umGlobal.togglePopup`, параметром передается идентификатор попапа. Сам попап размещен в layout')
+						+Btn(onclick='umGlobal.togglePopup("success")') Открыть попап
+
+					+UiCell('<i><b>+Notify</b></i> - уведомление в углу экрана, открывается при нажатии на кнопку, при вызове метода `umGlobal.showNotify`, параметром передается текст уведомления.')
+						+Btn(onclick='umGlobal.showNotify("Текст уведомления")') Открыть уведомление
