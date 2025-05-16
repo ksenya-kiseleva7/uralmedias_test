@@ -1,0 +1,18 @@
+mixin Accordeon()
+    .m-accordeon.js-accordeon
+        .m-accordeon__item.js-accordeon__item.isActive
+            .m-accordeon__label.js-accordeon__label
+                .m-accordeon__title Заголовок
+                .m-accordeon__arrow
+                    +svg('arrow-s')
+            .m-accordeon__submenu.js-accordeon__submenu
+                .m-accordeon__content
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum magni nisi nobis perspiciatis unde? Distinctio, dolorem eaque in minima neque nesciunt nobis odio sunt? Eaque eius nemo voluptate voluptatem! Rerum?
+        .m-accordeon__item.js-accordeon__item
+            .m-accordeon__label.js-accordeon__label
+                .m-accordeon__title Заголовок
+                .m-accordeon__arrow
+                    +svg('arrow-s')
+            .m-accordeon__submenu.js-accordeon__submenu(style="display: none;")
+                .m-accordeon__content
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum magni nisi nobis perspiciatis unde? Distinctio, dolorem eaque in minima neque nesciunt nobis odio sunt? Eaque eius nemo voluptate voluptatem! Rerum?

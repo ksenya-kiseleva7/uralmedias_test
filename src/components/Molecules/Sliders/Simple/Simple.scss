@@ -1,0 +1,12 @@
+@import '../../../../../node_modules/swiper/swiper.scss';
+
+.m-simpleSlider {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+	overflow: hidden;
+	
+	&__slider {
+		position: relative;
+	}
+}

@@ -1,0 +1,17 @@
+.m-map {
+    width: 100%;
+    height: 500px;
+    background-color: var(--grey-light-color);
+
+    @media (max-width: 1023px) {
+        height: 400px;
+    }
+
+    &--mini {
+        height: 368px;
+
+        @media (max-width: 767px) {
+            height: 255px;
+        }
+    }
+}

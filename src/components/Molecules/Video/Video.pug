@@ -1,0 +1,4 @@
+mixin Video(style)
+    div(class=(style ? "m-video m-video--"+style : 'm-video'))
+        video(poster="/img/video/poster.jpg" preload="metadata" controls).js-video
+            source(src="/files/video.mp4", type="video/mp4")

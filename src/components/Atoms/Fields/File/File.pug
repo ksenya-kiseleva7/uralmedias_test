@@ -1,0 +1,11 @@
+mixin File()
+    .a-file.js-file
+        label.a-file__button
+            input(type="file", name="").js-file__input
+            +svg('file')
+            span Прикрепить файл: резюме, фото и т.п.:
+        .a-file__capture(style="display: none").js-file__capture
+            span.a-file__capture-name.js-file__capture-name Прикрепленный файл
+            button.a-file__capture-delete.js-file__capture-delete
+                +svg('close')
+        .a-file__error.js-file__error(style="display: none")
