@@ -1,0 +1,21 @@
+//контейнеры
+.container {
+  max-width: calc(1600px + (70px * 2));
+  margin: 0 auto;
+  padding: 0 70px;
+
+  @media screen and (max-width: 1300px){
+    max-width: calc(1300px + (40px * 2));
+    padding: 0 60px;
+  }
+
+  @media screen and (max-width: 992px){
+    max-width: 100%;
+    padding: 0 40px;
+  }
+
+  @media screen and (max-width: 576px) {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+}
