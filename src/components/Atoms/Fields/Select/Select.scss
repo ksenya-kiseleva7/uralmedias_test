@@ -1,0 +1,93 @@
+.a-select {
+    position: relative;
+    z-index: 5;
+
+    &.isOpen {
+
+        & svg {
+            transform: scaleY(-1);
+        }
+    }
+
+    &__label,
+    &__window {
+        background-color: var(--white-color);
+    }
+
+    &__label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+        height: 52px;
+        padding: 14px 18px 16px 25px;
+        border: 1px solid var(--grey-color);
+        border-radius: 26px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+
+        & svg {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            fill: var(--basic-color);
+            transition: var(--defaultTransition);
+        }
+    }
+
+    &__window {
+        position: absolute;
+        display: none;
+        max-height: 256px;
+        height: auto;
+        left: 0;
+        top: calc(100% - 1px);
+        width: 100%;
+        border: 1px solid var(--grey-color);
+        border-radius: 30px;
+        z-index: 4;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        padding: 15px 25px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+
+        & + & {
+            border-top: 1px solid var(--grey-color);
+        }
+
+        input {
+            display: none;
+        }
+
+        &:active {
+            color: var(--primary-color);
+        }
+
+        @media(hover: hover) {
+            transition: var(--defaultTransition);
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+
+        &.isSelected {
+            background-color: var(--grey-light-color);
+            pointer-events: none;
+        }
+    }
+}

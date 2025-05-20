@@ -1,0 +1,48 @@
+extends /common/layout
+
+block append head 
+	link(href="/styles/ui-kit.page.min.css" rel="stylesheet")
+
+block content
+	main.ui-kit
+		+UiNav
+		+UiContainer
+			+UiSections
+				+UiGrid
+					+UiSection('Аккордеоны')
+						+UiCell('+Accordeon')
+							+Accordeon
+					+UiSection('Хлебные крошки')
+						+UiCell('+Breadcrumbs')
+							+Breadcrumbs
+				+UiSection('Карты')
+					+UiGrid
+						+UiCell('+YandexMap')
+							+YandexMap
+						+UiCell('+YandexMap(true)')
+							+YandexMap(true)
+				+UiSection('Пагинации')
+					+UiGrid
+						+UiCell('+BulletsPag')
+							+BulletsPag
+						+UiCell('+PagePag')
+							+PagePag
+				+UiGrid
+					+UiSection('Видео')
+						+UiCell('+Video')
+							+Video
+					+UiSection('Слайдер')
+						+UiCell('+SimpleSlider')
+							+SimpleSlider
+								.swiper-slide
+									+Title Слайд 1
+								.swiper-slide
+									+Title Слайд 2
+								.swiper-slide
+									+Title Слайд 3
+								.swiper-slide
+									+Title Слайд 4
+				+UiSection('Карусель логотипов')
+					+UiCell('+LogoTrain')
+						+LogoTrain
+							

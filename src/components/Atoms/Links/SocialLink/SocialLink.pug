@@ -1,0 +1,15 @@
+//- block: svg | img
+//- style: 'primary' | 'invert'
+mixin SocialLink(style = 'primary')
+    a(
+        class='a-socialLink' 
+        class!='a-socialLink--'+style 
+        class!=attributes.class 
+        onclick!=attributes.onclick 
+        disabled!=attributes.disabled 
+        href!=attributes.href 
+        style!=attributes.style)
+        if block
+            block
+        else
+            +svg('arrow')

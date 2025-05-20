@@ -1,0 +1,15 @@
+mixin PagePag()
+    .m-pagePag
+        .m-pagePag__content
+            a(href="#").m-pagePag__prev
+                +svg('arrow')
+            .m-pagePag__pages
+                +Link.m-pagePag__page 1
+
+                +Link.m-pagePag__page.isActive 2
+                +Link.m-pagePag__page 3
+                .m-pagePag__page ...
+                +Link.m-pagePag__page 9
+
+            a(href="#").m-pagePag__next
+                +svg('arrow')

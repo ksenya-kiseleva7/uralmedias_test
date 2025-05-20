@@ -1,0 +1,33 @@
+mixin Footer
+    footer.o-footer
+        .o-footer__top
+            +Container.o-footer__grid
+                a(href="/").o-footer__logo.isHiddenTab.isHiddenMob
+                    img(src="/img/um-logo.svg")
+
+                .o-footer__nav
+                    +Link(href="#") Пункт
+                    +Link(href="#") Пункт
+                    +Link(href="#") Пункт
+                    +Link(href="#") Пункт
+                    +Link(href="#") Пункт
+                    +Link(href="#") Пункт
+                .o-footer__right
+                    .o-footer__contacts 
+                        +Link(href="tel:+7 (999) 999-99-99") +7 (999) 999-99-99
+                        +Link('primary')(href="mailto:mail@yandex.ru") mail@yandex.ru
+
+        +Container.o-footer__bottom
+            .o-footer__bottom-left 
+                span © 2020 — 2023
+                +Link('grey')(href="/privacy/") Политика конфиденциальности
+
+                div This site is protected by reCAPTCHA and the Google
+                    +Link('grey') Privacy Policy
+                    |  and
+                    +Link('grey') Terms of Service
+                    |  apply
+            .o-footer__bottom-right 
+                span Сделано в 
+                    +Link(href="https://uralmedias.ru" target="_blank" rel="nofollow") Uralmedias
+

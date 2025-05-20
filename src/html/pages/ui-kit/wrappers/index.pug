@@ -1,0 +1,91 @@
+extends /common/layout
+
+block append head 
+	link(href="/styles/ui-kit.page.min.css" rel="stylesheet")
+
+block content
+	main.ui-kit
+		+UiNav
+		+UiSections
+			+UiContainer
+				+UiSections
+
+					+UiCell('<b><i>+Block</i></b> - частоиспользуемый компонент описывающий логический блок, содержит в себе заголовок и ссылку, принимает в себя любую разметку, обычно это грид сетка с карточками')
+						+Block('Заголовок блока', 'Ссылка на страницу', '#')
+							| какой то внутренний контент
+					
+					+UiCell('<b><i>+Blocks</i></b> - компонент реализующий отступы между логическими блоками внутри, как правило в дизайне не более 2ух размеров отступов между блоками, если необходим больший отступ, то размещаем два последовательных компонента +Blocks')
+						+Blocks 
+							div(style={padding: '10px',background: "red"}) Первый блок
+							div(style={padding: '10px',background: "green"}) Второй блок
+							div(style={padding: '10px',background: "blue"}) Третий блок
+
+					+UiCell('<b><i>+Container</i></b> - контейнер центрированый по ширине, реализует ограничение ширины полезной области блока, а также боковые отступы от краев экрана')
+						+Container 
+							div(style={padding: '10px',background: "red"}) Внутренний контент
+					
+					+UiCell('<b><i>+Content</i></b> - контейнер содержащий простые html теги и стилизующий списки, отсутпы, таблицы и пр, в эту область как правило размещается текст заполненый менеджером через визуальный редактор CMS системы')
+						+Content 
+							p Параграф 1
+							p Параграф 2
+							ul 
+								li Пункт списка 1
+								li Пункт списка 2
+								li Пункт списка 3
+							h2 Заголовок h2
+							ol 
+								li Пункт списка
+								li Пункт списка
+								li Пункт списка
+							h3 Заголовок h3
+							table 
+								tr 
+									th Заголовок
+									th Заголовок
+									th Заголовок
+								tr 
+									td Значение
+									td Значение
+									td Значение
+								tr 
+									td Значение
+									td Значение
+									td Значение
+								tr 
+									td Значение
+									td Значение
+									td Значение
+
+					+UiCell('<b><i>+AnimatedShow</i></b> - компонент позволяющий добавить анимацию появления вложенному компоненту при появлении его в области видимости')
+						+AnimatedShow
+							div(style={padding: '10px',background: "red"}) Я плавно появился
+						
+					+UiCell('<b><i>+Grid</i></b>(1) - простая грид сетка, от 1 до 5 колонок')
+						+Grid(1)
+							div(style={padding: '10px',background: "red"}) Первый блок
+						
+					+UiCell('<b><i>+Grid</i></b>(2) - простая грид сетка, от 1 до 5 колонок')
+						+Grid(2)
+							div(style={padding: '10px',background: "red"}) Первый блок
+							div(style={padding: '10px',background: "green"}) Второй блок
+						
+					+UiCell('<b><i>+Grid</i></b>(3) - простая грид сетка, от 1 до 5 колонок')
+						+Grid(3)
+							div(style={padding: '10px',background: "red"}) Первый блок
+							div(style={padding: '10px',background: "green"}) Второй блок
+							div(style={padding: '10px',background: "blue"}) Третий блок
+						
+					+UiCell('<b><i>+Grid</i></b>(4) - простая грид сетка, от 1 до 5 колонок')
+						+Grid(4)
+							div(style={padding: '10px',background: "red"}) Первый блок
+							div(style={padding: '10px',background: "green"}) Второй блок
+							div(style={padding: '10px',background: "blue"}) Третий блок
+							div(style={padding: '10px',background: "yellow"}) Четвертый блок
+						
+					+UiCell('<b><i>+Grid</i></b>(5) - простая грид сетка, от 1 до 5 колонок')
+						+Grid(5)
+							div(style={padding: '10px',background: "red"}) Первый блок
+							div(style={padding: '10px',background: "green"}) Второй блок
+							div(style={padding: '10px',background: "blue"}) Третий блок
+							div(style={padding: '10px',background: "yellow"}) Четвертый блок
+							div(style={padding: '10px',background: "purple"}) Пятый блок

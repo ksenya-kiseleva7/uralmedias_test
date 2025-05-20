@@ -1,0 +1,10 @@
+mixin BulletsPag()
+    .m-bulletsPag(class!=attributes.class)
+        button(data-prev).m-bulletsPag__arrow
+            +svg('arrow')
+        .m-bulletsPag__bullets(data-bullets)
+            div.isActive
+            div
+            div
+        button(data-next).m-bulletsPag__arrow.m-bulletsPag__arrow--next
+            +svg('arrow')

@@ -1,0 +1,57 @@
+extends /common/layout
+
+block append head 
+	link(href="/styles/ui-kit.page.min.css" rel="stylesheet")
+
+block content
+	main.ui-kit
+		+UiNav
+		+UiContainer
+			+UiSections
+				+UiSection('Кнопки')
+					+UiGrid
+						+UiCell('+Btn()')
+							+Btn Кнопка
+						+UiCell('+Btn("transparent")', true)
+							+Btn("transparent") Кнопка
+				
+				+UiSection('Ссылки')
+					+UiGrid
+						+UiCell('+Link("primary")')
+							+Link('primary')(href="#") Ссылка
+						+UiCell('+Link("black")')
+							+Link('black')(href="#") Ссылка
+						+UiCell('+Link("grey")', true)
+							+Link('grey')(href="#") Ссылка
+						+UiCell('+Link("white")', true)
+							+Link('white')(href="#") Ссылка
+						+UiCell('+SocialLink("primary")')
+							+SocialLink('primary')(href="#")
+								+svg('social-vk')
+						+UiCell('+SocialLink("invert")')
+							+SocialLink('invert')(href="#")
+								+svg('social-vk')
+				
+				+UiSection('Поля формы')
+					+UiGrid
+						+UiCell('+Input')
+							+Input
+						+UiCell('+Input.js-mask-phone')
+							+Input("Телефон").js-mask-phone
+						+UiCell('+Select')
+							+Select
+						+UiCell('+File')
+							+File
+						
+				+UiSection('Заголовки')
+					+UiGrid
+						+UiCell('+Title(1)')
+							+Title(1) Заголовок 1
+						+UiCell('+Title(2)')
+							+Title(2) Заголовок 2
+						+UiCell('+Title(3)')
+							+Title(3) Заголовок 3
+						+UiCell('+Title(4)')
+							+Title(4) Заголовок 4
+						+UiCell('+Title(5)')
+							+Title(5) Заголовок 5

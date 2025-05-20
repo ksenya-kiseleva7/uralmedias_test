@@ -1,0 +1,6 @@
+mixin YandexMap(mini = false)
+    .m-map.js-map(
+        class!=mini&&'m-map--mini'
+        data-coordinates="55.708203, 37.394404" 
+        data-placemarks-data="[{\"coordinates\": [55.698203, 37.394404],\"contactsForBaloon\": [{\"title\": \"Адрес\",\"text\": \"121205, город Москва, Инновационный <br>центр Сколково, ул. Нобеля, 3\",\"link\": false},{\"title\": \"График работы\",\"text\": \"пн-пт с 09:00 до 18:00\",\"link\": false},{\"title\": \"Телефон\",\"text\": \"+7 993 222-79-93\",\"link\": \"tel:+7 993 222-79-93\"}]}]"
+    )
